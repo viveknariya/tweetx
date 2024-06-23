@@ -218,8 +218,8 @@ export class DatabaseService {
     const posts = transaction.objectStore('posts');
 
     const userRequest = store.get(email);
-    const followersRequest = follows.index('followerEmail').getAll(email);
-    const followingsRequest = follows.index('followingEmail').getAll(email);
+    const followersRequest = follows.index('followingEmail').getAll(email);
+    const followingsRequest = follows.index('followerEmail').getAll(email);
     const postsRequest = posts.index('userEmail').getAll(email);
 
     userRequest.onsuccess = () => {
