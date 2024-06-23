@@ -1,0 +1,20 @@
+<div
+  class="flex flex-col gap-10 md:p-20 p-10 w-full justify-center items-center"
+>
+  <div class="w-full max-w-xl flex flex-col gap-3">
+    <div>
+      <button
+        class="border rounded bg-red-400 text-white px-6 py-2"
+        (click)="Write()"
+      >
+        Write
+      </button>
+    </div>
+    <div>
+      <textarea [formControl]="write" class="w-full rounded-md"></textarea>
+    </div>
+  </div>
+  @for (item of items; track $index) {
+  <app-tweet [tweetData]="item"></app-tweet>
+  }
+</div>

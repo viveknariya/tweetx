@@ -1,0 +1,5 @@
+<div class="w-full max-w-xl flex flex-col gap-10">
+  @for (item of items; track $index) {
+  <app-follow [user]="item"></app-follow>
+  }
+</div>
